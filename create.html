@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Flashcard</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/ruby/ruby.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/php/php.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Create Flashcard</h1>
+    </header>
+
+    <form action="/create" method="post" class="create-form">
+        <label for="question">Question</label>
+        <input type="text" name="question" id="question" required>
+
+        <label for="type">Type</label>
+        <select name="type" id="type">
+            <option value="general">General</option>
+            <option value="code">Code</option>
+        </select>
+
+        <label for="answer">Answer</label>
+        <div id="answer" class="codemirror-container"></div>
+        <textarea id="answerTextarea" name="answer" style="display:none;"></textarea>
+
+        <button type="submit">Create</button>
+    </form>
+
+    <script src="/create.js"></script>
+</body>
+
+</html>
