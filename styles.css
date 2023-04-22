@@ -15,7 +15,6 @@ h1 {
     font-size: 2rem;
     font-weight: bold;
 }
-
 .create-form {
     max-width: 500px;
     margin: auto;
@@ -25,7 +24,9 @@ h1 {
     padding: 20px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     position: relative;
+    min-height: 400px;
 }
+
 
 .create-form label {
     display: block;
